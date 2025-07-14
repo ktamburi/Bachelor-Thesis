@@ -46,11 +46,11 @@ for strategic decision-making in retail operations.
 
 ├── [Codes](./Codes) : folder with all available Jupyter notebooks with the codes for this project.
 
+├── [Interactive_Maps_Optimization_Layer_Output](./Interactive_Maps_Optimization_Layer_Output) : folder with the interactive maps with the product distribution plans.
+
 ├── [Original Dataset](./Original%20Dataset) : folder with the file link to download the original dataset.
 
 ├── [Processed Dataset](./Processed%20Dataset) : folder with the processed/modified dataset output from the codes.
-
-├── [Interactive_Maps_Optimization_Layer_Output](./Interactive_Maps_Optimization_Layer_Output) : folder with the interactive maps with the product distribution plans.
 
 └── [Thesis_Klaudia_Tamburi_SWEIIIB.pdf](./Thesis_Klaudia_Tamburi_SWEIIIB.pdf) : graduation project documentation.
 
