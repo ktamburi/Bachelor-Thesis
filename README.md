@@ -15,6 +15,7 @@ This repository contains the official implementation of the Bachelor Thesis subm
 ---
 
 ## Abstract
+###### For more details you can read the full thesis documentaion [Artificial Intelligence Based Logistics Optimization Model to Increase Branch-Based Sales and Stock Harmony](./Thesis_Klaudia_Tamburi_SWEIIIB.pdf)
 
 Traditional supply chain management faces significant challenges including inaccurate
 demand forecasting, inefficient stock distribution, and high transportation costs, leading
@@ -39,17 +40,20 @@ This integrated approach demonstrates the potential of AI-powered supply chain
 optimization to address complex logistics challenges while providing actionable insights
 for strategic decision-making in retail operations.
  
-### For more details you can read the full thesis documentaion [Artificial Intelligence Based Logistics Optimization Model to Increase Branch-Based Sales and Stock Harmony] (./Thesis_Klaudia_Tamburi_SWEIIIB.pdf)
-
 ---
 
 ## Repository Structure
 
-├── [Codes] (./Codes) : folder with all available Jupyter notebooks with the codes for this project.
-├── [Original Dataset] (./Original%20Dataset) : folder with the file link to download the original dataset.
-├── [Processed Dataset] (./Processed%20Dataset) : folder with the processed/modified dataset output from the codes.
-├── [Interactive_Maps_Optimization_Layer_Output] (./Interactive_Maps_Optimization_Layer_Output) : folder with the interactive maps with the product distribution plans.
-└── [Thesis_Klaudia_Tamburi_SWEIIIB.pdf] (./Thesis_Klaudia_Tamburi_SWEIIIB.pdf) : graduation project documentation.
+├── [Codes](./Codes) : folder with all available Jupyter notebooks with the codes for this project.
+
+├── [Original Dataset](./Original%20Dataset) : folder with the file link to download the original dataset.
+
+├── [Processed Dataset](./Processed%20Dataset) : folder with the processed/modified dataset output from the codes.
+
+├── [Interactive_Maps_Optimization_Layer_Output](./Interactive_Maps_Optimization_Layer_Output) : folder with the interactive maps with the product distribution plans.
+
+└── [Thesis_Klaudia_Tamburi_SWEIIIB.pdf](./Thesis_Klaudia_Tamburi_SWEIIIB.pdf) : graduation project documentation.
+
 
 ---
 
