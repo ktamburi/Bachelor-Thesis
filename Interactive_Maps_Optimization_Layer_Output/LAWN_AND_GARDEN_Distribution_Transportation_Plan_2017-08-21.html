@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8de447f2d119cad03e096031807d1174 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8de447f2d119cad03e096031807d1174" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8de447f2d119cad03e096031807d1174 = L.map(
+                "map_8de447f2d119cad03e096031807d1174",
+                {
+                    center: [-0.3766489, -78.5056384],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4fa3a6c3bd58a603411bb30e81abf19b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4fa3a6c3bd58a603411bb30e81abf19b.addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var marker_2f24f13e0e1de94b386b71a67da46baf = L.marker(
+                [-0.3766489, -78.5056384],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_3b7db3065330d560d86bea734f1583dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2f24f13e0e1de94b386b71a67da46baf.bindTooltip(
+                `<div>
+                     Warehouse HQ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f24f13e0e1de94b386b71a67da46baf.setIcon(icon_3b7db3065330d560d86bea734f1583dc);
+            
+    
+            var poly_line_6797bb4d737a6057ec5c4c580dff7c9e = L.polyline(
+                [[-0.3766489, -78.5056384], [0.021543935203175192, -77.9911569940683], [0.5158522660243103, -78.13380848849825], [0.963792706115939, -79.6519349857659], [-1.0314992837285049, -80.81712604287887], [-1.034590793718999, -80.81652582087072], [-2.262327447783457, -80.9264044565539], [-2.5969637243036514, -80.42381585973604], [-3.3105663175122184, -79.95007973048149], [-3.3141689426291343, -79.95420599717424], [-4.000349903228834, -79.19686416841621], [-2.900051552039807, -79.00170590868288], [-2.896554698230482, -79.00250614847312], [-2.8987593486778103, -79.0067460826257], [-2.2894847753121845, -80.09375204344478], [-2.291016996936951, -80.09530687345465], [-2.292515397700723, -80.09898129932843], [-2.2936710200719213, -80.09954756327045], [-2.2927311372207773, -80.10076529425258], [-2.2934000869539997, -80.10303101090098], [-2.286652875956308, -80.09968745196691], [-2.287207005624368, -80.09591319494064], [-1.9212818534621672, -79.9084752387354], [-1.853801237120096, -79.75955020821762], [-1.8809291595965023, -79.50681560435896], [-1.2457658209572506, -78.63339723219251], [-1.244378115855369, -78.63084426800309], [-0.9377988118892057, -78.61722868976373], [-0.9309313182078689, -78.6192509854695], [-0.3766489, -78.5056384]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            poly_line_6797bb4d737a6057ec5c4c580dff7c9e.bindTooltip(
+                `<div>
+                     Vehicle 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e268f50b36ae89688a4135c73d125967 = L.marker(
+                [0.021543935203175192, -77.9911569940683],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_bf9a5bcb523e379b6e6407f931ef1b4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e268f50b36ae89688a4135c73d125967.bindTooltip(
+                `<div>
+                     Store 11 Demand: 47.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e268f50b36ae89688a4135c73d125967.setIcon(icon_bf9a5bcb523e379b6e6407f931ef1b4b);
+            
+    
+            var marker_9a6b4240bda550fa912d450da11ce271 = L.marker(
+                [0.5158522660243103, -78.13380848849825],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_1b9bace00552e0b9ffff280f21a54548 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9a6b4240bda550fa912d450da11ce271.bindTooltip(
+                `<div>
+                     Store 15 Demand: 3247.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9a6b4240bda550fa912d450da11ce271.setIcon(icon_1b9bace00552e0b9ffff280f21a54548);
+            
+    
+            var marker_6343f4f5e1388692e38d28b924245f9a = L.marker(
+                [0.963792706115939, -79.6519349857659],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_4289fd1658cea67c59aef6f1849f93e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6343f4f5e1388692e38d28b924245f9a.bindTooltip(
+                `<div>
+                     Store 43 Demand: 32.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6343f4f5e1388692e38d28b924245f9a.setIcon(icon_4289fd1658cea67c59aef6f1849f93e6);
+            
+    
+            var marker_7341c88718517688eb23331c3c3c7042 = L.marker(
+                [-1.0314992837285049, -80.81712604287887],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_97aaa9c77519cdcb28c819fdd69e09fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_7341c88718517688eb23331c3c3c7042.bindTooltip(
+                `<div>
+                     Store 52 Demand: 520.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7341c88718517688eb23331c3c3c7042.setIcon(icon_97aaa9c77519cdcb28c819fdd69e09fe);
+            
+    
+            var marker_1b639bf514f65fdedb4b336bb7d6b080 = L.marker(
+                [-1.034590793718999, -80.81652582087072],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_613874b9a9b61001fe2aa0a3aa030907 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_1b639bf514f65fdedb4b336bb7d6b080.bindTooltip(
+                `<div>
+                     Store 53 Demand: 850.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b639bf514f65fdedb4b336bb7d6b080.setIcon(icon_613874b9a9b61001fe2aa0a3aa030907);
+            
+    
+            var marker_bc04f3d6c6310c05b618db48639419ee = L.marker(
+                [-2.262327447783457, -80.9264044565539],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_ed05c9ed9c1cf728a414c3d3e11ec8cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bc04f3d6c6310c05b618db48639419ee.bindTooltip(
+                `<div>
+                     Store 25 Demand: 85.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc04f3d6c6310c05b618db48639419ee.setIcon(icon_ed05c9ed9c1cf728a414c3d3e11ec8cc);
+            
+    
+            var marker_a806fc82eeb2dee4d43ea74cf41c122a = L.marker(
+                [-2.5969637243036514, -80.42381585973604],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_28375bd72f6be7eb81cac414a4358dca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a806fc82eeb2dee4d43ea74cf41c122a.bindTooltip(
+                `<div>
+                     Store 35 Demand: 1337.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a806fc82eeb2dee4d43ea74cf41c122a.setIcon(icon_28375bd72f6be7eb81cac414a4358dca);
+            
+    
+            var marker_69f989b1ad029028b4c7e28ad4bf8cd5 = L.marker(
+                [-3.3105663175122184, -79.95007973048149],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_202fdddb6f724795c5164cb6301f8f7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_69f989b1ad029028b4c7e28ad4bf8cd5.bindTooltip(
+                `<div>
+                     Store 41 Demand: 54.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69f989b1ad029028b4c7e28ad4bf8cd5.setIcon(icon_202fdddb6f724795c5164cb6301f8f7a);
+            
+    
+            var marker_b55ff0422c811928836b28b56807d216 = L.marker(
+                [-3.3141689426291343, -79.95420599717424],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_d51225e3db22eacafdf99807bc557ac2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b55ff0422c811928836b28b56807d216.bindTooltip(
+                `<div>
+                     Store 40 Demand: 3997.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b55ff0422c811928836b28b56807d216.setIcon(icon_d51225e3db22eacafdf99807bc557ac2);
+            
+    
+            var marker_27d8e6e51c3b89fb983c765084225972 = L.marker(
+                [-4.000349903228834, -79.19686416841621],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_e25f0ce478dbe7713e928ec1f2ae3870 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_27d8e6e51c3b89fb983c765084225972.bindTooltip(
+                `<div>
+                     Store 38 Demand: 731.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27d8e6e51c3b89fb983c765084225972.setIcon(icon_e25f0ce478dbe7713e928ec1f2ae3870);
+            
+    
+            var marker_e92c01a4babfdc2ce56d9fc863dcd269 = L.marker(
+                [-2.900051552039807, -79.00170590868288],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_a6a72e8a2d2560e31f660c4c9fcff066 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e92c01a4babfdc2ce56d9fc863dcd269.bindTooltip(
+                `<div>
+                     Store 42 Demand: 51.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e92c01a4babfdc2ce56d9fc863dcd269.setIcon(icon_a6a72e8a2d2560e31f660c4c9fcff066);
+            
+    
+            var marker_6d58e8f8fd961cb8fa2852bd4c0a5523 = L.marker(
+                [-2.896554698230482, -79.00250614847312],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_e5ba68ddafce800dce9c54242089dff0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6d58e8f8fd961cb8fa2852bd4c0a5523.bindTooltip(
+                `<div>
+                     Store 37 Demand: 53.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6d58e8f8fd961cb8fa2852bd4c0a5523.setIcon(icon_e5ba68ddafce800dce9c54242089dff0);
+            
+    
+            var marker_b958a7e836b62c120435cfd205a6be5f = L.marker(
+                [-2.8987593486778103, -79.0067460826257],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_f5c257b28a73f5fd2ba3a81174f1cd58 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b958a7e836b62c120435cfd205a6be5f.bindTooltip(
+                `<div>
+                     Store 39 Demand: 97.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b958a7e836b62c120435cfd205a6be5f.setIcon(icon_f5c257b28a73f5fd2ba3a81174f1cd58);
+            
+    
+            var marker_e6515e3173ec5e26e522a79e33b99deb = L.marker(
+                [-2.2894847753121845, -80.09375204344478],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_a5ff9f8de28768577b43eff983f836da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e6515e3173ec5e26e522a79e33b99deb.bindTooltip(
+                `<div>
+                     Store 24 Demand: 50.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e6515e3173ec5e26e522a79e33b99deb.setIcon(icon_a5ff9f8de28768577b43eff983f836da);
+            
+    
+            var marker_4e48abecefc8445e371bbbba45fd28d5 = L.marker(
+                [-2.291016996936951, -80.09530687345465],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_fac2746e7c9f128cae56c61b6d23493f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4e48abecefc8445e371bbbba45fd28d5.bindTooltip(
+                `<div>
+                     Store 26 Demand: 145.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e48abecefc8445e371bbbba45fd28d5.setIcon(icon_fac2746e7c9f128cae56c61b6d23493f);
+            
+    
+            var marker_32369604ab43b0fc0785bc0b5c5a43e0 = L.marker(
+                [-2.292515397700723, -80.09898129932843],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_65ae4d62344747b252f6905185e308d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_32369604ab43b0fc0785bc0b5c5a43e0.bindTooltip(
+                `<div>
+                     Store 29 Demand: 48.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32369604ab43b0fc0785bc0b5c5a43e0.setIcon(icon_65ae4d62344747b252f6905185e308d8);
+            
+    
+            var marker_449c1cd94a801ebc74f76145deabaf89 = L.marker(
+                [-2.2936710200719213, -80.09954756327045],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_f76f11f6f2b65dfed044d134c9b7196d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_449c1cd94a801ebc74f76145deabaf89.bindTooltip(
+                `<div>
+                     Store 51 Demand: 965.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_449c1cd94a801ebc74f76145deabaf89.setIcon(icon_f76f11f6f2b65dfed044d134c9b7196d);
+            
+    
+            var marker_4dc17ca4ae7bc0bace22d276dcd43dc7 = L.marker(
+                [-2.2927311372207773, -80.10076529425258],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_97139111dfa689d80b77fe2055e5d87e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4dc17ca4ae7bc0bace22d276dcd43dc7.bindTooltip(
+                `<div>
+                     Store 28 Demand: 1123.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4dc17ca4ae7bc0bace22d276dcd43dc7.setIcon(icon_97139111dfa689d80b77fe2055e5d87e);
+            
+    
+            var marker_bf9a84fb4e6a3743672ede8ee9510f90 = L.marker(
+                [-2.2934000869539997, -80.10303101090098],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_1978fbd92d12579f6627e400104ff704 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bf9a84fb4e6a3743672ede8ee9510f90.bindTooltip(
+                `<div>
+                     Store 32 Demand: 115.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf9a84fb4e6a3743672ede8ee9510f90.setIcon(icon_1978fbd92d12579f6627e400104ff704);
+            
+    
+            var marker_9f12f7bf396b4fe2b02891d833ca5265 = L.marker(
+                [-2.286652875956308, -80.09968745196691],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_01c50cea8430281a3da5132f250d9d26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9f12f7bf396b4fe2b02891d833ca5265.bindTooltip(
+                `<div>
+                     Store 34 Demand: 997.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f12f7bf396b4fe2b02891d833ca5265.setIcon(icon_01c50cea8430281a3da5132f250d9d26);
+            
+    
+            var marker_9db7bfd65882fa8a260cdb91d35c6432 = L.marker(
+                [-2.287207005624368, -80.09591319494064],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_573590a22b2fc6509fcd7de292f93a03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9db7bfd65882fa8a260cdb91d35c6432.bindTooltip(
+                `<div>
+                     Store 30 Demand: 59.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9db7bfd65882fa8a260cdb91d35c6432.setIcon(icon_573590a22b2fc6509fcd7de292f93a03);
+            
+    
+            var marker_af9a3985260be535412cc64f2585cb1b = L.marker(
+                [-1.9212818534621672, -79.9084752387354],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_e87a9f30d0d87dbcba88b42514087662 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_af9a3985260be535412cc64f2585cb1b.bindTooltip(
+                `<div>
+                     Store 27 Demand: 47.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af9a3985260be535412cc64f2585cb1b.setIcon(icon_e87a9f30d0d87dbcba88b42514087662);
+            
+    
+            var marker_af594291bdbb0d93c1b79830b3b55440 = L.marker(
+                [-1.853801237120096, -79.75955020821762],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_3eca1f615b19e10a47e8fc0522c3bcab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_af594291bdbb0d93c1b79830b3b55440.bindTooltip(
+                `<div>
+                     Store 36 Demand: 50.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af594291bdbb0d93c1b79830b3b55440.setIcon(icon_3eca1f615b19e10a47e8fc0522c3bcab);
+            
+    
+            var marker_5bd348841184ee7cd6602f4f4ed308f1 = L.marker(
+                [-1.8809291595965023, -79.50681560435896],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_1aaeeafe51d42ab22d4fed870350fa17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5bd348841184ee7cd6602f4f4ed308f1.bindTooltip(
+                `<div>
+                     Store 31 Demand: 51.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5bd348841184ee7cd6602f4f4ed308f1.setIcon(icon_1aaeeafe51d42ab22d4fed870350fa17);
+            
+    
+            var marker_5f04db5a2098bae9ad966bd62cc894d3 = L.marker(
+                [-1.2457658209572506, -78.63339723219251],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_4d2c4f2cedd1378411223536a10ca7f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5f04db5a2098bae9ad966bd62cc894d3.bindTooltip(
+                `<div>
+                     Store 23 Demand: 58.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f04db5a2098bae9ad966bd62cc894d3.setIcon(icon_4d2c4f2cedd1378411223536a10ca7f7);
+            
+    
+            var marker_7eef1cd28bd7d6ac04279fb3efff7e40 = L.marker(
+                [-1.244378115855369, -78.63084426800309],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_8478cb5604204b8389d8690d5302b46c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_7eef1cd28bd7d6ac04279fb3efff7e40.bindTooltip(
+                `<div>
+                     Store 50 Demand: 2464.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7eef1cd28bd7d6ac04279fb3efff7e40.setIcon(icon_8478cb5604204b8389d8690d5302b46c);
+            
+    
+            var marker_96da2da6590a866f9af7960b71301bfa = L.marker(
+                [-0.9377988118892057, -78.61722868976373],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_656ee3a5b976248cb12b861f683b3762 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_96da2da6590a866f9af7960b71301bfa.bindTooltip(
+                `<div>
+                     Store 12 Demand: 48.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96da2da6590a866f9af7960b71301bfa.setIcon(icon_656ee3a5b976248cb12b861f683b3762);
+            
+    
+            var marker_45c1ed463ce6695eca7669b4c46428a5 = L.marker(
+                [-0.9309313182078689, -78.6192509854695],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_76e0fe23c5f85aa219bcbc37104736a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_45c1ed463ce6695eca7669b4c46428a5.bindTooltip(
+                `<div>
+                     Store 13 Demand: 11823.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45c1ed463ce6695eca7669b4c46428a5.setIcon(icon_76e0fe23c5f85aa219bcbc37104736a7);
+            
+    
+            var poly_line_430c6e332bffd139e460520b4d37c551 = L.polyline(
+                [[-0.3766489, -78.5056384], [-0.24411677779657748, -79.17059824874705], [-0.24832080201624276, -79.17468777324764], [-0.2521417080139819, -79.17474416132859], [-0.47981770300122467, -79.57867764912311], [-1.0629468378390565, -79.48122628449967], [-1.444246936926305, -79.05583937563715], [-1.6781979836310297, -78.64334979314776], [-1.4822958086273734, -77.99708687529701], [-0.3766489, -78.5056384]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            poly_line_430c6e332bffd139e460520b4d37c551.bindTooltip(
+                `<div>
+                     Vehicle 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2223ce0c4048c2654c1aaeb0f0d9422f = L.marker(
+                [-0.24411677779657748, -79.17059824874705],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_89e5403b53039bcf529469bda9f11404 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2223ce0c4048c2654c1aaeb0f0d9422f.bindTooltip(
+                `<div>
+                     Store 21 Demand: 348.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2223ce0c4048c2654c1aaeb0f0d9422f.setIcon(icon_89e5403b53039bcf529469bda9f11404);
+            
+    
+            var marker_8ff359a2e54e2bd9bb6200b0d39eae21 = L.marker(
+                [-0.24832080201624276, -79.17468777324764],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_93b57b2404dd7fefd177762faa8dc615 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8ff359a2e54e2bd9bb6200b0d39eae21.bindTooltip(
+                `<div>
+                     Store 16 Demand: 55.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ff359a2e54e2bd9bb6200b0d39eae21.setIcon(icon_93b57b2404dd7fefd177762faa8dc615);
+            
+    
+            var marker_2f28a06cb467d0995510ee17b0d740a7 = L.marker(
+                [-0.2521417080139819, -79.17474416132859],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_0c3270bf996997c6f45dc506f18a214a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2f28a06cb467d0995510ee17b0d740a7.bindTooltip(
+                `<div>
+                     Store 5 Demand: 1177.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f28a06cb467d0995510ee17b0d740a7.setIcon(icon_0c3270bf996997c6f45dc506f18a214a);
+            
+    
+            var marker_0dc0750b01e49b9a37086e9a7e5a818f = L.marker(
+                [-0.47981770300122467, -79.57867764912311],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_e5a4db2d153edad846e7a04c1504d98e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0dc0750b01e49b9a37086e9a7e5a818f.bindTooltip(
+                `<div>
+                     Store 54 Demand: 209.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0dc0750b01e49b9a37086e9a7e5a818f.setIcon(icon_e5a4db2d153edad846e7a04c1504d98e);
+            
+    
+            var marker_145662d21c94ce56dd729c728e8cfd11 = L.marker(
+                [-1.0629468378390565, -79.48122628449967],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_6e81e1481e6d1736816d7a0d304cc1ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_145662d21c94ce56dd729c728e8cfd11.bindTooltip(
+                `<div>
+                     Store 33 Demand: 49.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_145662d21c94ce56dd729c728e8cfd11.setIcon(icon_6e81e1481e6d1736816d7a0d304cc1ab);
+            
+    
+            var marker_dc8f97e681e18e7b8d227d45ab1a6a5c = L.marker(
+                [-1.444246936926305, -79.05583937563715],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_655518b8a0b888fe04a282d71a5bef9c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_dc8f97e681e18e7b8d227d45ab1a6a5c.bindTooltip(
+                `<div>
+                     Store 19 Demand: 1223.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc8f97e681e18e7b8d227d45ab1a6a5c.setIcon(icon_655518b8a0b888fe04a282d71a5bef9c);
+            
+    
+            var marker_054e99b99643ac316afdd9751df57fdf = L.marker(
+                [-1.6781979836310297, -78.64334979314776],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_542276491a2d4075d65caba7da2a180d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_054e99b99643ac316afdd9751df57fdf.bindTooltip(
+                `<div>
+                     Store 14 Demand: 46.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_054e99b99643ac316afdd9751df57fdf.setIcon(icon_542276491a2d4075d65caba7da2a180d);
+            
+    
+            var marker_87e5285452a9dbc0e2ad5ca252ed1dbb = L.marker(
+                [-1.4822958086273734, -77.99708687529701],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_a2cffcb020c78dea5dcf39db916d10a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_87e5285452a9dbc0e2ad5ca252ed1dbb.bindTooltip(
+                `<div>
+                     Store 22 Demand: 19883.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87e5285452a9dbc0e2ad5ca252ed1dbb.setIcon(icon_a2cffcb020c78dea5dcf39db916d10a2);
+            
+    
+            var poly_line_0d6f45a73cf73a410e53b15f527e512b = L.polyline(
+                [[-0.3766489, -78.5056384], [-0.2239534689627665, -78.50964928010804], [-0.22129104732957344, -78.51196727773747], [-0.2213011167156438, -78.51090960404188], [-0.2209297091651248, -78.51086705889884], [-0.22115014116325668, -78.50987489865048], [-0.21933775331483701, -78.50955706856875], [-0.21695119723644757, -78.50856993827426], [-0.21715813906290593, -78.51174260680949], [-0.21719726660133548, -78.5138025863044], [-0.21674084616884068, -78.51399396810021], [-0.21706218187515378, -78.51462249718035], [-0.21701289343810504, -78.51542481365415], [-0.21805090163523105, -78.51581452283608], [-0.21963527463807125, -78.51474380454566], [-0.21996089748436476, -78.516126528231], [-0.22209742118037196, -78.5150660783497], [-0.22421913219388406, -78.51608345659919], [-0.22427692307951894, -78.51342960365209], [-0.3766489, -78.5056384]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            poly_line_0d6f45a73cf73a410e53b15f527e512b.bindTooltip(
+                `<div>
+                     Vehicle 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ef04190e1b5a67cf44c3c75a9c8f9c40 = L.marker(
+                [-0.2239534689627665, -78.50964928010804],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_45808d349de6f93b4e0900e607523244 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ef04190e1b5a67cf44c3c75a9c8f9c40.bindTooltip(
+                `<div>
+                     Store 6 Demand: 89.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef04190e1b5a67cf44c3c75a9c8f9c40.setIcon(icon_45808d349de6f93b4e0900e607523244);
+            
+    
+            var marker_c85c07c17ea4d50be74a8e5b1769f37c = L.marker(
+                [-0.22129104732957344, -78.51196727773747],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_362430164caf9560e5ab9f07a5363245 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c85c07c17ea4d50be74a8e5b1769f37c.bindTooltip(
+                `<div>
+                     Store 9 Demand: 38.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c85c07c17ea4d50be74a8e5b1769f37c.setIcon(icon_362430164caf9560e5ab9f07a5363245);
+            
+    
+            var marker_08169d544477735867a96ad5c9a279fb = L.marker(
+                [-0.2213011167156438, -78.51090960404188],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_f06e2e661b4d573bb4b004e1a7370241 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_08169d544477735867a96ad5c9a279fb.bindTooltip(
+                `<div>
+                     Store 20 Demand: 651.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08169d544477735867a96ad5c9a279fb.setIcon(icon_f06e2e661b4d573bb4b004e1a7370241);
+            
+    
+            var marker_411bf752260e5c934dc6f4313f34abb6 = L.marker(
+                [-0.2209297091651248, -78.51086705889884],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_47ad1bac0392d084d3614583713eb48c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_411bf752260e5c934dc6f4313f34abb6.bindTooltip(
+                `<div>
+                     Store 45 Demand: 32.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_411bf752260e5c934dc6f4313f34abb6.setIcon(icon_47ad1bac0392d084d3614583713eb48c);
+            
+    
+            var marker_9dc8d19f8730537698ac3d79436305d9 = L.marker(
+                [-0.22115014116325668, -78.50987489865048],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_8e736c7190d3cd721480823ecf2696a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9dc8d19f8730537698ac3d79436305d9.bindTooltip(
+                `<div>
+                     Store 10 Demand: 49.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9dc8d19f8730537698ac3d79436305d9.setIcon(icon_8e736c7190d3cd721480823ecf2696a6);
+            
+    
+            var marker_2b7ec65e7f1d5409eaca382363c692b1 = L.marker(
+                [-0.21933775331483701, -78.50955706856875],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_dd443f404626cc65c7ca70d96cecdab4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2b7ec65e7f1d5409eaca382363c692b1.bindTooltip(
+                `<div>
+                     Store 4 Demand: 39.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b7ec65e7f1d5409eaca382363c692b1.setIcon(icon_dd443f404626cc65c7ca70d96cecdab4);
+            
+    
+            var marker_b38888673a44610ef2d05dccc54b261e = L.marker(
+                [-0.21695119723644757, -78.50856993827426],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_a3824ac5db519457b01355ba9eb04893 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b38888673a44610ef2d05dccc54b261e.bindTooltip(
+                `<div>
+                     Store 1 Demand: 1342.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b38888673a44610ef2d05dccc54b261e.setIcon(icon_a3824ac5db519457b01355ba9eb04893);
+            
+    
+            var marker_dfd858d30120207f8de7fe8a152786e2 = L.marker(
+                [-0.21715813906290593, -78.51174260680949],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_e3a5c0dbfcd1da09b3540e7efe4ecd6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_dfd858d30120207f8de7fe8a152786e2.bindTooltip(
+                `<div>
+                     Store 8 Demand: 39.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dfd858d30120207f8de7fe8a152786e2.setIcon(icon_e3a5c0dbfcd1da09b3540e7efe4ecd6d);
+            
+    
+            var marker_ac2b208b86a0f21c7dac1f5d7c55bbde = L.marker(
+                [-0.21719726660133548, -78.5138025863044],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_8ecf76f9220d9072ed3e2e28c861ce93 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ac2b208b86a0f21c7dac1f5d7c55bbde.bindTooltip(
+                `<div>
+                     Store 7 Demand: 6575.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac2b208b86a0f21c7dac1f5d7c55bbde.setIcon(icon_8ecf76f9220d9072ed3e2e28c861ce93);
+            
+    
+            var marker_e5ab0c3fe1368d9f7bb39261bdda2ce1 = L.marker(
+                [-0.21674084616884068, -78.51399396810021],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_7a37d3a72e98402f491325c878ba3ae0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e5ab0c3fe1368d9f7bb39261bdda2ce1.bindTooltip(
+                `<div>
+                     Store 47 Demand: 31.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5ab0c3fe1368d9f7bb39261bdda2ce1.setIcon(icon_7a37d3a72e98402f491325c878ba3ae0);
+            
+    
+            var marker_434a74a7279c6c5426053b09789fb2e8 = L.marker(
+                [-0.21706218187515378, -78.51462249718035],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_d6b18e9fe1e51c59530534660ef57724 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_434a74a7279c6c5426053b09789fb2e8.bindTooltip(
+                `<div>
+                     Store 18 Demand: 3191.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_434a74a7279c6c5426053b09789fb2e8.setIcon(icon_d6b18e9fe1e51c59530534660ef57724);
+            
+    
+            var marker_d08f3d4ed754d0f8c741fcc48efe4f20 = L.marker(
+                [-0.21701289343810504, -78.51542481365415],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_8674e21ca85b9ea5ab9634bedfca86d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d08f3d4ed754d0f8c741fcc48efe4f20.bindTooltip(
+                `<div>
+                     Store 2 Demand: 1113.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d08f3d4ed754d0f8c741fcc48efe4f20.setIcon(icon_8674e21ca85b9ea5ab9634bedfca86d1);
+            
+    
+            var marker_d2229306b5a83226d4a966aa37e73580 = L.marker(
+                [-0.21805090163523105, -78.51581452283608],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_df538638d4f2f6063aebefdf882dd0eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d2229306b5a83226d4a966aa37e73580.bindTooltip(
+                `<div>
+                     Store 49 Demand: 33.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2229306b5a83226d4a966aa37e73580.setIcon(icon_df538638d4f2f6063aebefdf882dd0eb);
+            
+    
+            var marker_13c27d6d6dbaefbcd8d358ecf0fe43ba = L.marker(
+                [-0.21963527463807125, -78.51474380454566],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_dbf1345b878e85cedc682b4fe1638f11 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_13c27d6d6dbaefbcd8d358ecf0fe43ba.bindTooltip(
+                `<div>
+                     Store 48 Demand: 510.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13c27d6d6dbaefbcd8d358ecf0fe43ba.setIcon(icon_dbf1345b878e85cedc682b4fe1638f11);
+            
+    
+            var marker_2341a9f858f06c9440710985f43c00a6 = L.marker(
+                [-0.21996089748436476, -78.516126528231],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_edce464b0167339f42a2f2e6b9eba6a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2341a9f858f06c9440710985f43c00a6.bindTooltip(
+                `<div>
+                     Store 3 Demand: 39.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2341a9f858f06c9440710985f43c00a6.setIcon(icon_edce464b0167339f42a2f2e6b9eba6a1);
+            
+    
+            var marker_9736208a6341157ff422c5a12d084ce3 = L.marker(
+                [-0.22209742118037196, -78.5150660783497],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_fcd12699397185f3d4f761542b03a6d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9736208a6341157ff422c5a12d084ce3.bindTooltip(
+                `<div>
+                     Store 44 Demand: 31.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9736208a6341157ff422c5a12d084ce3.setIcon(icon_fcd12699397185f3d4f761542b03a6d4);
+            
+    
+            var marker_bc07286079550dcc2e7011057a8af7da = L.marker(
+                [-0.22421913219388406, -78.51608345659919],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_dfb9e1ba003b41b609494ae0f192f3d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bc07286079550dcc2e7011057a8af7da.bindTooltip(
+                `<div>
+                     Store 46 Demand: 6509.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc07286079550dcc2e7011057a8af7da.setIcon(icon_dfb9e1ba003b41b609494ae0f192f3d2);
+            
+    
+            var marker_1237eac86375c6bd80c2f97a395398f2 = L.marker(
+                [-0.22427692307951894, -78.51342960365209],
+                {
+}
+            ).addTo(map_8de447f2d119cad03e096031807d1174);
+        
+    
+            var icon_79e182e94239645afdb075dc31e2dd7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "truck",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_1237eac86375c6bd80c2f97a395398f2.bindTooltip(
+                `<div>
+                     Store 17 Demand: 4433.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1237eac86375c6bd80c2f97a395398f2.setIcon(icon_79e182e94239645afdb075dc31e2dd7f);
+            
+</script>
+</html>
