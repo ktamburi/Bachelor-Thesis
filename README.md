@@ -8,9 +8,11 @@ This repository contains the official implementation of the Bachelor Thesis subm
 **Submitted**: June 2025  
 **University**: Epoka University
 
+
 ---
 
 > **Note**: This version reflects the initial implementation submitted as part of the thesis defense. Ongoing improvements and refinements are planned for future versions.
+
 
 ---
 
@@ -39,6 +41,7 @@ identify operational improvement opportunities.
 This integrated approach demonstrates the potential of AI-powered supply chain
 optimization to address complex logistics challenges while providing actionable insights
 for strategic decision-making in retail operations.
+
  
 ---
 
@@ -67,3 +70,10 @@ This project supports running the notebooks on either Google Colab or Azure Mach
 
 ### Step 3: Run The Codes
 Make sure to run the notebooks in order as numbered.
+
+
+---
+
+## Ongoing Work
+This README will be regularly updated as the thesis progresses. Thank you for your interest!
+
